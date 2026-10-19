@@ -34,12 +34,12 @@ npm run dev                           # http://localhost:5173 (site and API toge
 Locally everything runs offline (D1, R2 and KV are simulated) and Turnstile uses Cloudflare's test
 keys, which always pass.
 
-| Command | What it does |
-| --- | --- |
-| `npm run dev` | Site and API with hot reload |
+| Command                                                | What it does                      |
+| ------------------------------------------------------ | --------------------------------- |
+| `npm run dev`                                          | Site and API with hot reload      |
 | `npm run typecheck` / `lint` / `test` / `format:check` | Checks (all run on pull requests) |
-| `npm run build` | Production build |
-| `npm run db:migrate:local` | Apply database migrations locally |
+| `npm run build`                                        | Production build                  |
+| `npm run db:migrate:local`                             | Apply database migrations locally |
 
 ## Releases
 

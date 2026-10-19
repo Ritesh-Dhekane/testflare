@@ -1,0 +1,192 @@
+/* Minimal styles for the first screens; the dashboard design pass comes later. */
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --text: #14161a;
+  --muted: #5d6470;
+  --line: #e2e5ea;
+  --accent: #f38020; /* flare orange */
+  --accent-ink: #ffffff;
+  --ok: #1a7f4b;
+  --warn: #a15c00;
+  --danger: #c2261d;
+  color-scheme: light dark;
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1115;
+    --surface: #171a20;
+    --text: #eef0f3;
+    --muted: #9aa2ae;
+    --line: #2a2f38;
+    --ok: #4cc38a;
+    --warn: #f0b35a;
+    --danger: #ff6b61;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+a {
+  color: var(--accent);
+}
+h1 {
+  font-size: 1.5rem;
+  margin: 0 0 4px;
+}
+h2 {
+  font-size: 1.1rem;
+  margin: 0 0 8px;
+}
+.brand {
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+.brand::first-letter {
+  color: var(--accent);
+}
+.muted {
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+/* Auth */
+.auth {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  gap: 20px;
+  padding: 24px 16px;
+  justify-items: center;
+}
+.auth .card {
+  width: min(420px, calc(100vw - 32px));
+  display: grid;
+  gap: 14px;
+}
+label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+input {
+  font: inherit;
+  font-weight: 400;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--text);
+}
+input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+.hint {
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.turnstile {
+  min-height: 65px;
+}
+.switch {
+  margin: 0;
+  text-align: center;
+}
+button {
+  font: inherit;
+  cursor: pointer;
+}
+button.primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border: 0;
+  border-radius: 10px;
+  padding: 11px 16px;
+  font-weight: 700;
+}
+button.primary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+button.link {
+  background: none;
+  border: 0;
+  color: var(--accent);
+  padding: 0 0 0 12px;
+}
+.error {
+  color: var(--danger);
+  margin: 0;
+}
+
+/* App */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+.who {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.dashboard {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 28px 16px;
+  display: grid;
+  gap: 16px;
+}
+.notice {
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--muted);
+}
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-right: 6px;
+}
+.badge.ok {
+  color: var(--ok);
+  border: 1px solid currentColor;
+}
+.badge.warn {
+  color: var(--warn);
+  border: 1px solid currentColor;
+}
+.loading {
+  min-height: 100vh;
+}
