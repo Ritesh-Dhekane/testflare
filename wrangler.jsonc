@@ -1,0 +1,23 @@
+// Cloudflare Worker: the API under /api and the web app (static assets) for everything else.
+// Bindings use placeholder ids locally (D1, R2 and KV are simulated); real ids are set at first deploy.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "testflare",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"],
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "testflare",
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations",
+    },
+  ],
+  "r2_buckets": [{ "binding": "BUILDS", "bucket_name": "testflare-builds" }],
+  "kv_namespaces": [{ "binding": "KV", "id": "00000000000000000000000000000000" }],
+  "observability": { "enabled": true },
+}

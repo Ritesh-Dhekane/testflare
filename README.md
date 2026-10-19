@@ -1,5 +1,13 @@
 # TestFlare
 
+![Status](https://img.shields.io/badge/status-work%20in%20progress-orange)
+[![Checks](https://github.com/Ritesh-Dhekane/testflare/actions/workflows/ci.yml/badge.svg)](https://github.com/Ritesh-Dhekane/testflare/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/Ritesh-Dhekane/testflare)](LICENSE)
+[![Last commit](https://img.shields.io/github/last-commit/Ritesh-Dhekane/testflare)](https://github.com/Ritesh-Dhekane/testflare/commits)
+![React](https://img.shields.io/badge/React-20232a?logo=react&logoColor=white)
+![Hono](https://img.shields.io/badge/Hono-e36002?logo=hono&logoColor=white)
+![Cloudflare Workers](https://img.shields.io/badge/Cloudflare%20Workers-f38020?logo=cloudflareworkers&logoColor=white)
+
 Share Android test builds with your team. Upload a build from the browser, your CI pipeline or the
 command line; testers install it from a Play Store-style page or by scanning a QR code.
 
@@ -34,12 +42,12 @@ npm run dev                           # http://localhost:5173 (site and API toge
 Locally everything runs offline (D1, R2 and KV are simulated) and Turnstile uses Cloudflare's test
 keys, which always pass.
 
-| Command | What it does |
-| --- | --- |
-| `npm run dev` | Site and API with hot reload |
+| Command                                                | What it does                      |
+| ------------------------------------------------------ | --------------------------------- |
+| `npm run dev`                                          | Site and API with hot reload      |
 | `npm run typecheck` / `lint` / `test` / `format:check` | Checks (all run on pull requests) |
-| `npm run build` | Production build |
-| `npm run db:migrate:local` | Apply database migrations locally |
+| `npm run build`                                        | Production build                  |
+| `npm run db:migrate:local`                             | Apply database migrations locally |
 
 ## Releases
 

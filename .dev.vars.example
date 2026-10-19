@@ -1,0 +1,4 @@
+# Local secrets for `npm run dev` (copy to .dev.vars, which is git-ignored).
+# Cloudflare's Turnstile test secret: every check passes. Production uses a real secret set with
+# `wrangler secret put TURNSTILE_SECRET`.
+TURNSTILE_SECRET=1x0000000000000000000000000000000AA
